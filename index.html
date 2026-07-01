@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Mamas Ami</title>
+    <style>
+        /* Background Aesthetic */
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #fdfbf7 0%, #efebe9 100%); 
+            color: #5d5752; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            padding: 20px; 
+        }
+        .container { 
+            background: rgba(255, 255, 255, 0.85); 
+            padding: 40px; 
+            border-radius: 30px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            max-width: 500px; 
+            width: 100%; 
+            text-align: center; 
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        .page { display: none; }
+        .active { display: block; }
+        h1 { color: #8d6e63; font-size: 26px; margin-bottom: 20px; }
+        p { line-height: 1.8; font-size: 16px; margin-bottom: 25px; }
+        /* Foto agar pasti tampil */
+        img { width: 100%; height: 300px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; border: 3px solid #efebe9; }
+        button { background-color: #8d6e63; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer; font-size: 16px; transition: 0.3s; }
+        button:hover { background-color: #6d4c41; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="page1" class="page active">
+        <h1>Halo, Mamas Ami!</h1>
+        <p>Muhammad Madjid Wicaksono, hari-hariku jadi lebih indah karena ada kamu. Aku buatkan ini khusus untukmu, sayang.</p>
+        <button onclick="next(2)">Buka Kado Spesial 🌸</button>
+    </div>
+
+    <div id="page2" class="page">
+        <h1>Tentang Kita</h1>
+        <img src="mamas 1.jpg" alt="Mamas 1">
+        <p>Jujur, saat pertama kali melihatmu, hatiku merasa sangat tenang. Kamu sosok yang ingin aku jaga selamanya.</p>
+        <button onclick="next(3)">Lanjut 🌸</button>
+    </div>
+
+    <div id="page3" class="page">
+        <h1>Doa & Harapan</h1>
+        <img src="mamas 2.jpg" alt="Mamas 2">
+        <p>Muhammad Madjid Wicaksono, namamu selalu kusebut dalam doaku. Semoga hubungan kita selalu diberkahi dan penuh tawa.</p>
+        <button onclick="next(4)">Terakhir 🌸</button>
+    </div>
+
+    <div id="page4" class="page">
+        <h1>Terima Kasih, Mamas</h1>
+        <img src="mamas 3.jpg" alt="Mamas 3">
+        <p>Terima kasih telah menjadi sosok yang sabar. Selamat beristirahat, cintaku. Semoga mimpi-mimpimu indah.</p>
+        <button onclick="alert('Peluk virtual dari Lathifah! 🤗')">Peluk Virtual 🤗</button>
+    </div>
+</div>
+
+<script>
+    function next(n) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('page' + n).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
